@@ -9,7 +9,7 @@ from functools import partial
 from rt_currency_converter import RealTimeCurrencyConverter
 from form import *
 from Exceptions import *
-from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QMessageBox
+from PyQt5.QtWidgets import QMessageBox, QFileDialog
 
 
 class Main:
@@ -137,16 +137,27 @@ class Main:
             print(self.obj_list)
 
     def on_export(self):
+        count = 0
         try:
             if self.obj_list:
-                with open('test_file.json', 'w') as file:
-                    json.dump(self.obj_list, file)
+
+                option = QFileDialog.Options()
+                option |= QFileDialog.DontUseNativeDialog
+                file_name = QFileDialog.getSaveFileName(self.main_window, "Export file", "cc" + str(count) + ".json",
+                                                        filter="JSON files (*.json)", options=option)
+                print(file_name)
+                if file_name == ('', ''):
+                    raise ActionCanceled
+
+                else:
+                    json.dump(self.obj_list, open(file_name[0], 'w'))
                     print('JSON file created')
                     message_exp = QMessageBox(QMessageBox.NoIcon, 'Export message',
-                                            "JSON file created",
-                                            QMessageBox.Ok)
+                                              "JSON file created",
+                                              QMessageBox.Ok)
                     message_exp.setWindowIcon(QtGui.QIcon(self.ui.icon_name))
                     message_exp.exec()
+
             else:
                 raise NoneValueException
         except NoneValueException:
@@ -157,6 +168,8 @@ class Main:
                                       QMessageBox.Ok)
             message_exp.setWindowIcon(QtGui.QIcon(self.ui.icon_name))
             message_exp.exec()
+        except ActionCanceled:
+            print("Export canceled")
 
 
 if __name__ == '__main__':
