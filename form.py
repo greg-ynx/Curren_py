@@ -5,7 +5,7 @@
 """
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtGui import QIntValidator
+
 
 
 class Ui_MainWindow(object):
@@ -87,7 +87,6 @@ class Ui_MainWindow(object):
         self.horizontalLayout_line.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_line.setObjectName("horizontalLayout_line")
 
-        #self.onlyInt = QIntValidator()
         self.only_int_pattern = QtCore.QRegExp("[0-9.]{30}")
         self.only_int = QtGui.QRegExpValidator(self.only_int_pattern)
 
@@ -208,10 +207,15 @@ class Ui_MainWindow(object):
         self.actionSave = QtWidgets.QAction(MainWindow)
         self.actionSave.setObjectName("actionSave")
 
+        self.actionExport_file = QtWidgets.QAction(MainWindow)
+        self.actionSave.setObjectName("Export file")
+
         self.actionSee_on_Git_Hub = QtWidgets.QAction(MainWindow)
         self.actionSee_on_Git_Hub.setObjectName("actionSee_on_Git_Hub")
 
         self.menuFile.addAction(self.actionSave)
+
+        self.menuFile.addAction(self.actionExport_file)
 
         self.menuHelp.addAction(self.actionSee_on_Git_Hub)
 
@@ -236,4 +240,5 @@ class Ui_MainWindow(object):
         self.menuFile.setTitle(_translate("MainWindow", "File"))
         self.menuHelp.setTitle(_translate("MainWindow", "Help"))
         self.actionSave.setText(_translate("MainWindow", "Save"))
+        self.actionExport_file.setText(_translate("MainWindow", "Export file"))
         self.actionSee_on_Git_Hub.setText(_translate("MainWindow", "See on Git Hub"))

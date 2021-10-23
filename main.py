@@ -2,12 +2,14 @@
 @Author : lyl_Lynx
 @Note : Main script that has to be run
 """
-
+import json
 import sys
+import webbrowser
 from functools import partial
-
 from rt_currency_converter import RealTimeCurrencyConverter
 from form import *
+from Exceptions import *
+from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QMessageBox
 
 
 class Main:
@@ -23,6 +25,7 @@ class Main:
         self.list_currencies = list(self.rl_currency.currencies)
         self.init_comboBox()
         self.main_window.show()
+        self.obj_list = []
         # END App initialization
 
         # Component connection
@@ -36,8 +39,14 @@ class Main:
 
         self.ui.lineEdit_from.textEdited.connect(partial(self.change_lineEdit_value, self.ui.lineEdit_from))
         self.ui.lineEdit_to.textEdited.connect(partial(self.change_lineEdit_value, self.ui.lineEdit_to))
-        # END Component connection
 
+        self.ui.pushButton_cancel.clicked.connect(self.on_close)
+        self.ui.pushButton_save.clicked.connect(self.on_save)
+        self.ui.actionSave.triggered.connect(self.on_save)
+        self.ui.actionExport_file.triggered.connect(self.on_export)
+        self.ui.actionSee_on_Git_Hub.triggered.connect(partial(webbrowser.open,
+                                                               "https://github.com/lyl-Lynx/Currency-Converter"))
+        # END Component connection
         sys.exit(self.app.exec())
 
     def init_comboBox(self):
@@ -82,6 +91,72 @@ class Main:
                                                     float(line_edit.text()),
                                                     deci_len),
                            '.{}f'.format(deci_len)))
+
+    def on_close(self):
+
+        close_valid = QMessageBox(QMessageBox.Question, 'Close question', "Do you want to close Currency Converter ?",
+                                  QMessageBox.Yes | QMessageBox.No)
+        close_valid.setWindowIcon(QtGui.QIcon(self.ui.icon_name))
+        close_valid.setDefaultButton(QMessageBox.Yes)
+        close_valid.buttonClicked.connect(self.confirm_close)
+        close_valid.exec()
+
+    def confirm_close(self, i):
+        print(i.text())
+        if i.text() == "&Yes":
+            sys.exit(self.app.exec())
+
+    def on_save(self):
+        try:
+            if self.ui.lineEdit_from.text() == "" or self.ui.lineEdit_to.text() == "":
+                raise NoneValueException
+            else:
+                obj = {
+                    "id": "{}".format(len(self.obj_list)),
+                    "from_currency": self.ui.comboBox_currency_from.currentText(),
+                    "from_currency_value": self.ui.lineEdit_from.text(),
+                    "to_currency": self.ui.comboBox_currency_to.currentText(),
+                    "to_currency_value": self.ui.lineEdit_to.text()
+                }
+                self.obj_list.append(obj)
+                print('New object added')
+                data_saved = QMessageBox(QMessageBox.NoIcon, 'Add data message',
+                                         "Data saved                   ",
+                                         QMessageBox.Ok)
+                data_saved.setWindowIcon(QtGui.QIcon(self.ui.icon_name))
+                data_saved.exec()
+
+        except NoneValueException:
+            print('NoneValueException : No values entered in input lines')
+            data_saved = QMessageBox(QMessageBox.Warning, 'Add data warning',
+                                     "NoneValueException : No values entered in input lines",
+                                     QMessageBox.Ok)
+            data_saved.setWindowIcon(QtGui.QIcon(self.ui.icon_name))
+            data_saved.exec()
+        finally:
+            print(self.obj_list)
+
+    def on_export(self):
+        try:
+            if self.obj_list:
+                with open('test_file.json', 'w') as file:
+                    json.dump(self.obj_list, file)
+                    print('JSON file created')
+                    message_exp = QMessageBox(QMessageBox.NoIcon, 'Export message',
+                                            "JSON file created",
+                                            QMessageBox.Ok)
+                    message_exp.setWindowIcon(QtGui.QIcon(self.ui.icon_name))
+                    message_exp.exec()
+            else:
+                raise NoneValueException
+        except NoneValueException:
+            print('NoneValueException : No value in object list\n'
+                  'Try to save some data')
+            message_exp = QMessageBox(QMessageBox.Warning, 'Export warning',
+                                      "NoneValueException : No value in object list\nTry to save some data",
+                                      QMessageBox.Ok)
+            message_exp.setWindowIcon(QtGui.QIcon(self.ui.icon_name))
+            message_exp.exec()
 
 
 if __name__ == '__main__':
