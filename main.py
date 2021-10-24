@@ -14,9 +14,9 @@ from PyQt5.QtWidgets import QMessageBox, QFileDialog
 
 class Main:
 
-    def __init__(self):
+    def __init__(self, app):
         # App initialization
-        self.app = QtWidgets.QApplication(sys.argv)
+        self.app = app
         self.main_window = QtWidgets.QMainWindow()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self.main_window)
@@ -24,8 +24,11 @@ class Main:
         self.rl_currency = RealTimeCurrencyConverter()
         self.list_currencies = list(self.rl_currency.currencies)
         self.init_comboBox()
+        self.ui.label_exchange_rate.setText(self.rl_currency.exchange_rate(self.ui.comboBox_currency_from.currentText(),
+                                                                           self.ui.comboBox_currency_to.currentText()))
         self.main_window.show()
         self.obj_list = []
+        self.export_count = 0
         # END App initialization
 
         # Component connection
@@ -47,7 +50,6 @@ class Main:
         self.ui.actionSee_on_Git_Hub.triggered.connect(partial(webbrowser.open,
                                                                "https://github.com/lyl-Lynx/Currency-Converter"))
         # END Component connection
-        sys.exit(self.app.exec())
 
     def init_comboBox(self):
         self.ui.comboBox_currency_to.addItems(self.list_currencies)
@@ -93,7 +95,6 @@ class Main:
                            '.{}f'.format(deci_len)))
 
     def on_close(self):
-
         close_valid = QMessageBox(QMessageBox.Question, 'Close question', "Do you want to close Currency Converter ?",
                                   QMessageBox.Yes | QMessageBox.No)
         close_valid.setWindowIcon(QtGui.QIcon(self.ui.icon_name))
@@ -137,18 +138,16 @@ class Main:
             print(self.obj_list)
 
     def on_export(self):
-        count = 0
         try:
             if self.obj_list:
-
                 option = QFileDialog.Options()
                 option |= QFileDialog.DontUseNativeDialog
-                file_name = QFileDialog.getSaveFileName(self.main_window, "Export file", "cc" + str(count) + ".json",
+                file_name = QFileDialog.getSaveFileName(self.main_window, "Export file",
+                                                        "cc" + str(self.export_count) + ".json",
                                                         filter="JSON files (*.json)", options=option)
                 print(file_name)
                 if file_name == ('', ''):
                     raise ActionCanceled
-
                 else:
                     json.dump(self.obj_list, open(file_name[0], 'w'))
                     print('JSON file created')
@@ -157,7 +156,7 @@ class Main:
                                               QMessageBox.Ok)
                     message_exp.setWindowIcon(QtGui.QIcon(self.ui.icon_name))
                     message_exp.exec()
-
+                    self.export_count += 1
             else:
                 raise NoneValueException
         except NoneValueException:
@@ -173,4 +172,6 @@ class Main:
 
 
 if __name__ == '__main__':
-    main = Main()
+    app = QtWidgets.QApplication(sys.argv)
+    main = Main(app)
+    sys.exit(app.exec())
