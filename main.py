@@ -14,9 +14,8 @@ from PyQt5.QtWidgets import QMessageBox, QFileDialog
 
 class Main:
 
-    def __init__(self, app):
+    def __init__(self):
         # App initialization
-        self.app = app
         self.main_window = QtWidgets.QMainWindow()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self.main_window)
@@ -105,7 +104,7 @@ class Main:
     def confirm_close(self, i):
         print(i.text())
         if i.text() == "&Yes":
-            sys.exit(self.app.exec())
+            sys.exit(app.exec())
 
     def on_save(self):
         try:
@@ -173,5 +172,5 @@ class Main:
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
-    main = Main(app)
+    main = Main()
     sys.exit(app.exec())
