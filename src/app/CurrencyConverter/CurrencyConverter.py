@@ -10,8 +10,6 @@ class CurrencyConverter:
     def __init__(self):
         url = "https://open.er-api.com/v6/latest/USD"
         self.data, self.rates = self.refresh_rates(url)
-        print(self.data)
-        print(self.rates)
 
     def convert(self, from_currency, to_currency, amount):
         if from_currency != 'USD':
