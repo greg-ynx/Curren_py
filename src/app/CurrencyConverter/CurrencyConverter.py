@@ -14,8 +14,7 @@ class CurrencyConverter:
     def convert(self, from_currency, to_currency, amount):
         if from_currency != 'USD':
             amount /= self.rates[from_currency]
-        amount = round(amount * self.rates[to_currency], 4)
-        return amount
+        return round(amount * self.rates[to_currency], 4)
 
     @staticmethod
     def refresh_rates(url):
