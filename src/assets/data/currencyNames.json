@@ -1,0 +1,647 @@
+{
+  "AED" :
+  {
+    "name" : "UAE Dirham",
+    "country" : "United Arab Emirates"
+  },
+  "AFN"	: {
+    "name" : "Afghan Afghani",
+    "country" : "Afghanistan"
+  },
+  "ALL" : {
+    "name" : "Albanian Lek",
+    "country" : "Albania"
+  },
+  "AMD" : {
+    "name" :  "Armenian Dram",
+    "country" : "Armenia"
+  },
+  "ANG" : {
+    "name" :  "Netherlands Antillian Guilder",
+    "country" : "Netherlands Antilles"
+  },
+  "AOA" : {
+    "name" :  "Angolan Kwanza",
+    "country" : "Angola"
+  },
+  "ARS" : {
+    "name" :  "Argentine Peso",
+    "country" : "Argentina"
+  },
+  "AUD" : {
+    "name" :  "Australian Dollar",
+    "country" : "Australia"
+  },
+  "AWG" : {
+    "name" :  "Aruban Florin",
+    "country" : "Aruba"
+  },
+  "AZN" : {
+    "name" :  "Azerbaijani Manat",
+    "country" : "Azerbaijan"
+  },
+  "BAM" : {
+    "name" :  "Bosnia and Herzegovina Mark",
+    "country" : "Bosnia and Herzegovina"
+  },
+  "BBD" : {
+    "name" :  "Barbados Dollar",
+    "country" : "Barbados"
+  },
+  "BDT" : {
+    "name" :  "Bangladeshi Taka",
+    "country" : "Bangladesh"
+  },
+  "BGN" : {
+    "name" :  "Bulgarian Lev",
+    "country" : "Bulgaria"
+  },
+  "BHD" : {
+    "name" :  "Bahraini Dinar",
+    "country" : "Bahrain"
+  },
+  "BIF" : {
+    "name" :  "Burundian Franc",
+    "country" : "Burundi"
+  },
+  "BMD" : {
+    "name" :  ,
+    "country" :
+  },	"Bermudian Dollar"	"Bermuda"
+  "BND" : {
+    "name" :  ,
+    "country" :
+  },	"Brunei Dollar"	"Brunei"
+  "BOB" : {
+    "name" :  ,
+    "country" :
+  },	"Bolivian Boliviano"	"Bolivia"
+  "BRL" : {
+    "name" :  ,
+    "country" :
+  },	"Brazilian Real"	"Brazil"
+  "BSD" : {
+    "name" :  ,
+    "country" :
+  },	"Bahamian Dollar"	"Bahamas"
+  "BTN" : {
+    "name" :  ,
+    "country" :
+  },	"Bhutanese Ngultrum"	"Bhutan"
+  "BWP" : {
+    "name" :  ,
+    "country" :
+  },	"Botswana Pula"	"Botswana"
+  "BYN" : {
+    "name" :  ,
+    "country" :
+  },	"Belarusian Ruble"	"Belarus"
+  "BZD" : {
+    "name" :  ,
+    "country" :
+  },	"Belize Dollar"	"Belize"
+  "CAD" : {
+    "name" :  ,
+    "country" :
+  },	"Canadian Dollar"	"Canada"
+  "CDF" : {
+    "name" :  ,
+    "country" :
+  },	"Congolese Franc"	"Democratic Republic of the Congo"
+  "CHF" : {
+    "name" :  ,
+    "country" :
+  },	"Swiss Franc"	"Switzerland"
+  "CLP" : {
+    "name" :  ,
+    "country" :
+  },	"Chilean Peso"	"Chile"
+  "CNY" : {
+    "name" :  ,
+    "country" :
+  },	"Chinese Renminbi"	"China"
+  "COP" : {
+    "name" :  ,
+    "country" :
+  },	"Colombian Peso"	"Colombia"
+  "CRC" : {
+    "name" :  ,
+    "country" :
+  },	"Costa Rican Colon"	"Costa Rica"
+  "CUP" : {
+    "name" :  ,
+    "country" :
+  },	"Cuban Peso"	"Cuba"
+  "CVE" : {
+    "name" :  ,
+    "country" :
+  },	"Cape Verdean Escudo"	"Cape Verde"
+  "CZK" : {
+    "name" :  ,
+    "country" :
+  },	"Czech Koruna"	"Czech Republic"
+  "DJF" : {
+    "name" :  ,
+    "country" :
+  },	"Djiboutian Franc"	"Djibouti"
+  "DKK" : {
+    "name" :  ,
+    "country" :
+  },	"Danish Krone"	"Denmark"
+  "DOP" : {
+    "name" :  ,
+    "country" :
+  },	"Dominican Peso"	"Dominican Republic"
+  "DZD" : {
+    "name" :  ,
+    "country" :
+  },	"Algerian Dinar"	"Algeria"
+  "EGP" : {
+    "name" :  ,
+    "country" :
+  },	"Egyptian Pound"	"Egypt"
+  "ERN" : {
+    "name" :  ,
+    "country" :
+  },	"Eritrean Nakfa"	"Eritrea"
+  "ETB" : {
+    "name" :  ,
+    "country" :
+  },	"Ethiopian Birr"	"Ethiopia"
+  "EUR" : {
+    "name" :  ,
+    "country" :
+  },	"Euro"	"European Union"
+  "FJD" : {
+    "name" :  ,
+    "country" :
+  },	"Fiji Dollar"	"Fiji"
+  "FKP" : {
+    "name" :  ,
+    "country" :
+  },	"Falkland Islands Pound"	"Falkland Islands"
+  "FOK" : {
+    "name" :  ,
+    "country" :
+  },	"Faroese Króna"	"Faroe Islands"
+  "GBP" : {
+    "name" :  ,
+    "country" :
+  },	"Pound Sterling"	"United Kingdom"
+  "GEL" : {
+    "name" :  ,
+    "country" :
+  },	"Georgian Lari"	"Georgia"
+  "GGP" : {
+    "name" :  ,
+    "country" :
+  },	"Guernsey Pound"	"Guernsey"
+  "GHS" : {
+    "name" :  ,
+    "country" :
+  },	"Ghanaian Cedi"	"Ghana"
+  "GIP" : {
+    "name" :  ,
+    "country" :
+  },	"Gibraltar Pound"	"Gibraltar"
+  "GMD" : {
+    "name" :  ,
+    "country" :
+  },	"Gambian Dalasi"	"The Gambia"
+  "GNF" : {
+    "name" :  ,
+    "country" :
+  },	"Guinean Franc"	"Guinea"
+  "GTQ" : {
+    "name" :  ,
+    "country" :
+  },	"Guatemalan Quetzal"	"Guatemala"
+  "GYD" : {
+    "name" :  ,
+    "country" :
+  },	"Guyanese Dollar"	"Guyana"
+  "HKD" : {
+    "name" :  ,
+    "country" :
+  },	"Hong Kong Dollar"	"Hong Kong"
+  "HNL" : {
+    "name" :  ,
+    "country" :
+  },	"Honduran Lempira"	"Honduras"
+  "HRK" : {
+    "name" :  ,
+    "country" :
+  },	"Croatian Kuna"	"Croatia"
+  "HTG" : {
+    "name" :  ,
+    "country" :
+  },	"Haitian Gourde"	"Haiti"
+  "HUF" : {
+    "name" :  ,
+    "country" :
+  },	"Hungarian Forint"	"Hungary"
+  "IDR" : {
+    "name" :  ,
+    "country" :
+  },	"Indonesian Rupiah"	"Indonesia"
+  "ILS" : {
+    "name" :  ,
+    "country" :
+  },	"Israeli New Shekel"	"Israel"
+  "IMP" : {
+    "name" :  ,
+    "country" :
+  },	"Manx Pound"	"Isle of Man"
+  "INR" : {
+    "name" :  ,
+    "country" :
+  },	"Indian Rupee"	"India"
+  "IQD" : {
+    "name" :  ,
+    "country" :
+  },	"Iraqi Dinar"	"Iraq"
+  "IRR" : {
+    "name" :  ,
+    "country" :
+  },	"Iranian Rial"	"Iran"
+  "ISK" : {
+    "name" :  ,
+    "country" :
+  },	"Icelandic Króna"	"Iceland"
+  "JEP" : {
+    "name" :  ,
+    "country" :
+  },	"Jersey Pound"	"Jersey"
+  "JMD" : {
+    "name" :  ,
+    "country" :
+  },	"Jamaican Dollar"	"Jamaica"
+  "JOD" : {
+    "name" :  ,
+    "country" :
+  },	"Jordanian Dinar"	"Jordan"
+  "JPY" : {
+    "name" :  ,
+    "country" :
+  },	"Japanese Yen"	"Japan"
+  "KES" : {
+    "name" :  ,
+    "country" :
+  },	"Kenyan Shilling"	"Kenya"
+  "KGS" : {
+    "name" :  ,
+    "country" :
+  },	"Kyrgyzstani Som"	"Kyrgyzstan"
+  "KHR" : {
+    "name" :  ,
+    "country" :
+  },	"Cambodian Riel"	"Cambodia"
+  "KID" : {
+    "name" :  ,
+    "country" :
+  },	"Kiribati Dollar"	"Kiribati"
+  "KMF" : {
+    "name" :  ,
+    "country" :
+  },	"Comorian Franc"	"Comoros"
+  "KRW" : {
+    "name" :  ,
+    "country" :
+  },	"South Korean Won"	"South Korea"
+  "KWD" : {
+    "name" :  ,
+    "country" :
+  },	"Kuwaiti Dinar"	"Kuwait"
+  "KYD" : {
+    "name" :  ,
+    "country" :
+  },	"Cayman Islands Dollar"	"Cayman Islands"
+  "KZT" : {
+    "name" :  ,
+    "country" :
+  },	"Kazakhstani Tenge"	"Kazakhstan"
+  "LAK" : {
+    "name" :  ,
+    "country" :
+  },	"Lao Kip"	"Laos"
+  "LBP" : {
+    "name" :  ,
+    "country" :
+  },	"Lebanese Pound"	"Lebanon"
+  "LKR" : {
+    "name" :  ,
+    "country" :
+  },	"Sri Lanka Rupee"	"Sri Lanka"
+  "LRD" : {
+    "name" :  ,
+    "country" :
+  },	"Liberian Dollar"	"Liberia"
+  "LSL" : {
+    "name" :  ,
+    "country" :
+  },	"Lesotho Loti"	"Lesotho"
+  "LYD" : {
+    "name" :  ,
+    "country" :
+  },	"Libyan Dinar"	"Libya"
+  "MAD" : {
+    "name" :  ,
+    "country" :
+  },	"Moroccan Dirham"	"Morocco"
+  "MDL" : {
+    "name" :  ,
+    "country" :
+  },	"Moldovan Leu"	"Moldova"
+  "MGA" : {
+    "name" :  ,
+    "country" :
+  },	"Malagasy Ariary"	"Madagascar"
+  "MKD" : {
+    "name" :  ,
+    "country" :
+  },	"Macedonian Denar"	"North Macedonia"
+  "MMK" : {
+    "name" :  ,
+    "country" :
+  },	"Burmese Kyat"	"Myanmar"
+  "MNT" : {
+    "name" :  ,
+    "country" :
+  },	"Mongolian Tögrög"	"Mongolia"
+  "MOP" : {
+    "name" :  ,
+    "country" :
+  },	"Macanese Pataca"	"Macau"
+  "MRU" : {
+    "name" :  ,
+    "country" :
+  },	"Mauritanian Ouguiya"	"Mauritania"
+  "MUR" : {
+    "name" :  ,
+    "country" :
+  },	"Mauritian Rupee"	"Mauritius"
+  "MVR" : {
+    "name" :  ,
+    "country" :
+  },	"Maldivian Rufiyaa"	"Maldives"
+  "MWK" : {
+    "name" :  ,
+    "country" :
+  },	"Malawian Kwacha"	"Malawi"
+  "MXN" : {
+    "name" :  ,
+    "country" :
+  },	"Mexican Peso"	"Mexico"
+  "MYR" : {
+    "name" :  ,
+    "country" :
+  },	"Malaysian Ringgit"	"Malaysia"
+  "MZN" : {
+    "name" :  ,
+    "country" :
+  },	"Mozambican Metical"	"Mozambique"
+  "NAD" : {
+    "name" :  ,
+    "country" :
+  },	"Namibian Dollar"	"Namibia"
+  "NGN" : {
+    "name" :  ,
+    "country" :
+  },	"Nigerian Naira"	"Nigeria"
+  "NIO" : {
+    "name" :  ,
+    "country" :
+  },	"Nicaraguan Córdoba"	"Nicaragua"
+  "NOK" : {
+    "name" :  ,
+    "country" :
+  },	"Norwegian Krone"	"Norway"
+  "NPR" : {
+    "name" :  ,
+    "country" :
+  },	"Nepalese Rupee"	"Nepal"
+  "NZD" : {
+    "name" :  ,
+    "country" :
+  },	"New Zealand Dollar"	"New Zealand"
+  "OMR" : {
+    "name" :  ,
+    "country" :
+  },	"Omani Rial"	"Oman"
+  "PAB" : {
+    "name" :  ,
+    "country" :
+  },	"Panamanian Balboa"	"Panama"
+  "PEN" : {
+    "name" :  ,
+    "country" :
+  },	"Peruvian Sol"	"Peru"
+  "PGK" : {
+    "name" :  ,
+    "country" :
+  },	"Papua New Guinean Kina"	"Papua New Guinea"
+  "PHP" : {
+    "name" :  ,
+    "country" :
+  },	"Philippine Peso"	"Philippines"
+  "PKR" : {
+    "name" :  ,
+    "country" :
+  },	"Pakistani Rupee"	"Pakistan"
+  "PLN" : {
+    "name" :  ,
+    "country" :
+  },	"Polish Złoty"	"Poland"
+  "PYG" : {
+    "name" :  ,
+    "country" :
+  },	"Paraguayan Guaraní"	"Paraguay"
+  "QAR" : {
+    "name" :  ,
+    "country" :
+  },	"Qatari Riyal"	"Qatar"
+  "RON" : {
+    "name" :  ,
+    "country" :
+  },	"Romanian Leu"	"Romania"
+  "RSD" : {
+    "name" :  ,
+    "country" :
+  },	"Serbian Dinar"	"Serbia"
+  "RUB" : {
+    "name" :  ,
+    "country" :
+  },	"Russian Ruble"	"Russia"
+  "RWF" : {
+    "name" :  ,
+    "country" :
+  },	"Rwandan Franc"	"Rwanda"
+  "SAR" : {
+    "name" :  ,
+    "country" :
+  },	"Saudi Riyal"	"Saudi Arabia"
+  "SBD" : {
+    "name" :  ,
+    "country" :
+  },	"Solomon Islands Dollar"	"Solomon Islands"
+  "SCR" : {
+    "name" :  ,
+    "country" :
+  },	"Seychellois Rupee"	"Seychelles"
+  "SDG" : {
+    "name" :  ,
+    "country" :
+  },	"Sudanese Pound"	"Sudan"
+  "SEK" : {
+    "name" :  ,
+    "country" :
+  },	"Swedish Krona"	"Sweden"
+  "SGD" : {
+    "name" :  ,
+    "country" :
+  },	"Singapore Dollar"	"Singapore"
+  "SHP" : {
+    "name" :  ,
+    "country" :
+  },	"Saint Helena Pound"	"Saint Helena"
+  "SLL" : {
+    "name" :  ,
+    "country" :
+  },	"Sierra Leonean Leone"	"Sierra Leone"
+  "SOS" : {
+    "name" :  ,
+    "country" :
+  },	"Somali Shilling"	"Somalia"
+  "SRD" : {
+    "name" :  ,
+    "country" :
+  },	"Surinamese Dollar"	"Suriname"
+  "SSP" : {
+    "name" :  ,
+    "country" :
+  },	"South Sudanese Pound"	"South Sudan"
+  "STN" : {
+    "name" :  ,
+    "country" :
+  },	"São Tomé and Príncipe Dobra"	"São Tomé and Príncipe"
+  "SYP" : {
+    "name" :  ,
+    "country" :
+  },	"Syrian Pound"	"Syria"
+  "SZL" : {
+    "name" :  ,
+    "country" :
+  },	"Eswatini Lilangeni"	"Eswatini"
+  "THB" : {
+    "name" :  ,
+    "country" :
+  },	"Thai Baht"	"Thailand"
+  "TJS" : {
+    "name" :  ,
+    "country" :
+  },	"Tajikistani Somoni"	"Tajikistan"
+  "TMT" : {
+    "name" :  ,
+    "country" :
+  },	"Turkmenistan Manat"	"Turkmenistan"
+  "TND" : {
+    "name" :  ,
+    "country" :
+  },	"Tunisian Dinar"	"Tunisia"
+  "TOP" : {
+    "name" :  ,
+    "country" :
+  },	"Tongan Paʻanga"	"Tonga"
+  "TRY" : {
+    "name" :  ,
+    "country" :
+  },	"Turkish Lira"	"Turkey"
+  "TTD" : {
+    "name" :  ,
+    "country" :
+  },	"Trinidad and Tobago Dollar"	"Trinidad and Tobago"
+  "TVD" : {
+    "name" :  ,
+    "country" :
+  },	"Tuvaluan Dollar"	"Tuvalu"
+  "TWD" : {
+    "name" :  ,
+    "country" :
+  },	"New Taiwan Dollar"	"Taiwan"
+  "TZS" : {
+    "name" :  ,
+    "country" :
+  },	"Tanzanian Shilling"	"Tanzania"
+  "UAH" : {
+    "name" :  ,
+    "country" :
+  },	"Ukrainian Hryvnia"	"Ukraine"
+  "UGX" : {
+    "name" :  ,
+    "country" :
+  },	"Ugandan Shilling"	"Uganda"
+  "USD" : {
+    "name" :  ,
+    "country" :
+  },	"United States Dollar"	"United States"
+  "UYU" : {
+    "name" :  ,
+    "country" :
+  },	"Uruguayan Peso"	"Uruguay"
+  "UZS" : {
+    "name" :  ,
+    "country" :
+  },	"Uzbekistani So'm"	"Uzbekistan"
+  "VES" : {
+    "name" :  ,
+    "country" :
+  },	"Venezuelan Bolívar Soberano"	"Venezuela"
+  "VND" : {
+    "name" :  ,
+    "country" :
+  },	"Vietnamese Đồng"	"Vietnam"
+  "VUV" : {
+    "name" :  ,
+    "country" :
+  },	"Vanuatu Vatu"	"Vanuatu"
+  "WST" : {
+    "name" :  ,
+    "country" :
+  },	"Samoan Tālā"	"Samoa"
+  "XAF" : {
+    "name" :  ,
+    "country" :
+  },	"Central African CFA Franc"	"CEMAC"
+  "XCD" : {
+    "name" :  ,
+    "country" :
+  },	"East Caribbean Dollar"	"Organisation of Eastern Caribbean States"
+  "XDR" : {
+    "name" :  ,
+    "country" :
+  },	"Special Drawing Rights"	"International Monetary Fund"
+  "XOF" : {
+    "name" :  ,
+    "country" :
+  },	"West African CFA franc"	"CFA"
+  "XPF" : {
+    "name" :  ,
+    "country" :
+  },	"CFP Franc"	"Collectivités d'Outre-Mer"
+  "YER" : {
+    "name" :  ,
+    "country" :
+  },	"Yemeni Rial"	"Yemen"
+  "ZAR" : {
+    "name" :  ,
+    "country" :
+  },	"South African Rand"	"South Africa"
+  "ZMW" : {
+    "name" :  ,
+    "country" :
+  },	"Zambian Kwacha"	"Zambia"
+  "ZWL" : {
+    "name" :  ,
+    "country" :
+  },	"Zimbabwean Dollar"	"Zimbabwe"
+}
