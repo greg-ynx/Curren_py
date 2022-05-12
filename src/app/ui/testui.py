@@ -15,35 +15,25 @@ class MyGridLayout(GridLayout):
 
     def __init__(self, **kwargs):
         super(MyGridLayout, self).__init__(**kwargs)
-        self.cols = 2
+        self.cols = 1
         self.currency_converter = CurrencyConverter()
-        with open(os.path.join(data_dir, 'currencyNames.json'), encoding='utf-8') as f:
-            d = json.load(f)
-        self.currencies = [key for key in d]
 
-        # left currency select component
-        self.currency_1_drop_down = DropDown()
-        for key in d:
-            btn = Button(text=key)
-            btn.bind(on_press=lambda btn: self.currency_1_drop_down.select(btn.text))
-            self.currency_1_drop_down.add_widget(btn)
-        self.add_widget(self.currency_1_drop_down)
-
-        # right currency select component
-        self.currency_2_drop_down = DropDown()
-        for key in d:
-            btn = Button(text=key)
-            btn.bind(on_press=lambda btn: self.currency_2_drop_down.select(btn.text))
-            self.currency_2_drop_down.add_widget(btn)
-        self.add_widget(self.currency_2_drop_down)
+        self.top_grid = GridLayout()
+        self.top_grid.cols = 2
 
         # left currency amount text input
+        self.currency_1_label = Label(text="Currency 1 :")
+        self.top_grid.add_widget(self.currency_1_label)
         self.currency_1_text_input = TextInput(multiline=False)
-        self.add_widget(self.currency_1_text_input)
+        self.top_grid.add_widget(self.currency_1_text_input)
 
         # right currency amount text input
+        self.currency_2_label = Label(text="Currency 2 :")
+        self.top_grid.add_widget(self.currency_2_label)
         self.currency_2_text_input = TextInput(multiline=False)
-        self.add_widget(self.currency_2_text_input)
+        self.top_grid.add_widget(self.currency_2_text_input)
+
+        self.add_widget(self.top_grid)
 
         # Test conversion Button
         self.convert_button = Button(text="Conversion", font_size=11)
