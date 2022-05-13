@@ -1,0 +1,75 @@
+#:import utils kivy.utils
+#:import os os
+#:import img_dir config.definitions.img_dir
+<Label>
+    font_size:28
+
+<Spinner>
+    background_normal: ''
+    background_color: '#003399'
+
+<MainFrame>
+
+    canvas.before:
+        Color:
+            rgba: utils.get_color_from_hex('#B7b6b6')
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+        padding:5
+        spacing:5
+
+        Label:
+            text:''
+            size_hint_y: None
+            height:50
+
+        Image:
+            source:os.path.join(img_dir, 'curren_py_logo_star.png')
+            allow_stretch: True
+            keep_ratio: True
+
+        Label:
+            text:''
+            size_hint_y: None
+            height:50
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint_y: .3
+            spacing:75
+            padding: [50,0,50,0]
+            Spinner:
+                values: 'test', 'test1', 'test', 'test1'
+
+            Spinner:
+                values: 'test', 'test1', 'test2', 'test3', 'test', 'test1', 'test2', 'test3', 'test', 'test1', 'test2', 'test3'
+
+        Label:
+            text:''
+            size_hint_y: None
+            height:20
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint_y: .3
+            spacing:20
+            padding: [20,0,20,0]
+            TextInput:
+                font_size:28
+                multiline: False
+            TextInput:
+                font_size:28
+                multiline: False
+
+        Label:
+            text:''
+            size_hint_y: None
+            height:20
+
+        Label:
+            text:'Exchange rate :'
