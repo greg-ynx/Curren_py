@@ -44,10 +44,12 @@
             spacing:75
             padding: [50,0,50,0]
             Spinner:
-                values: 'test', 'test1', 'test', 'test1'
+                id: c1_spinner
+                on_text: root.exchange(c1_spinner, self.text, c2_spinner.text)
 
             Spinner:
-                values: 'test', 'test1', 'test2', 'test3', 'test', 'test1', 'test2', 'test3', 'test', 'test1', 'test2', 'test3'
+                id: c2_spinner
+                on_text: root.exchange(c2_spinner, self.text, c1_spinner.text)
 
         Label:
             text:''
@@ -60,11 +62,17 @@
             spacing:20
             padding: [20,0,20,0]
             TextInput:
+                id: c1_text_input
+                text: '1'
                 font_size:28
                 multiline: False
+                on_text: root.lol(c1_text_input.id)
             TextInput:
+                id: c2_text_input
+                text: '1'
                 font_size:28
                 multiline: False
+                on_text: root.lol(c2_text_input.id)
 
         Label:
             text:''
@@ -72,4 +80,5 @@
             height:20
 
         Label:
-            text:'Exchange rate :'
+            id: exchange_rate_label
+            text:''
