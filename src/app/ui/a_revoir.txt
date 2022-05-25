@@ -1,0 +1,3 @@
+Ne pas utiliser le bind pour nos fonctions de changement de text
+Lorsque l'on change de devise, seul le text de l'input opposé doit changer
+Lorsque l'on change le text d'un côté, la conversion doit se faire de l'autre
