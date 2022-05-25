@@ -29,15 +29,10 @@ class MainFrame(Widget):
         self.ids.c1_text_input.bind(on_text_validate=self.refresh_values)
         self.ids.c2_text_input.bind(on_text_validate=self.refresh_values)
 
-    def exchange(self, kv_id, from_currency, to_currency):
-        from_key = 'USD'
-        to_key = 'USD'
-        for key in self.data:
-            if self.data[key]['name'] == from_currency:
-                from_key = key
-            if self.data[key]['name'] == to_currency:
-                to_key = key
-        if kv_id == self.ids.c1_spinner:
+    def exchange(self, instance):
+        from_key = self.get_key_from_value(instance.text)
+        if instance.ids == self.ids.c1_spinner:
+            to_key = self.get_key_from_value(self.ids.c2_text_input.text)
             self.ids.c2_text_input.text = str(self.currency_converter.convert(
                 from_key,
                 to_key,
@@ -46,6 +41,7 @@ class MainFrame(Widget):
             from_value = float(self.ids.c2_text_input.text)
             to_value = float(self.ids.c1_text_input.text)
         else:
+            to_key = self.get_key_from_value(self.ids.c1_text_input.text)
             self.ids.c1_text_input.text = str(self.currency_converter.convert(
                 from_key,
                 to_key,
