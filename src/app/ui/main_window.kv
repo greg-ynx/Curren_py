@@ -45,11 +45,9 @@
             padding: [50,0,50,0]
             Spinner:
                 id: c1_spinner
-                on_text: root.exchange(c1_spinner, self.text, c2_spinner.text)
 
             Spinner:
                 id: c2_spinner
-                on_text: root.exchange(c2_spinner, self.text, c1_spinner.text)
 
         Label:
             text:''
@@ -63,14 +61,20 @@
             padding: [20,0,20,0]
             TextInput:
                 id: c1_text_input
-                text: '1'
+                input_filter: 'float'
+                input_type: 'number'
+                text: '1.0'
                 font_size:28
                 multiline: False
+                write_tab: False
             TextInput:
                 id: c2_text_input
-                text: '1'
+                input_filter: 'float'
+                input_type: 'number'
+                text: '1.0'
                 font_size:28
                 multiline: False
+                write_tab: False
 
         Label:
             text:''
