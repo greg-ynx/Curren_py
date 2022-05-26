@@ -12,9 +12,13 @@ class CurrencyConverter:
         self.data, self.rates = self.refresh_rates(url)
 
     def convert(self, from_currency, to_currency, amount):
+        print(from_currency, to_currency, amount)
         if from_currency != 'USD':
             amount /= self.rates[from_currency]
         return round(amount * self.rates[to_currency], 4)
+
+    def get_rate(self, from_currency, to_currency):
+        return 1 / self.rates[from_currency] * self.rates[to_currency]
 
     @staticmethod
     def refresh_rates(url):
