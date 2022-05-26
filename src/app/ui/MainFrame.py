@@ -1,11 +1,11 @@
+# This script was made by greg-ynx
+
 import os
-import re
-from config.definitions import data_dir, img_dir
+from config.definitions import data_dir, img_dir, app_dir
 import json
 import kivy
 from kivy.app import App
 from kivy.uix.widget import Widget
-# noinspection PyUnresolvedReferences
 from kivy.properties import ObjectProperty
 from src.app.CurrencyConverter.CurrencyConverter import CurrencyConverter
 from kivy.lang import Builder
@@ -13,7 +13,7 @@ from kivy.config import Config
 
 Config.set('graphics', 'width', '900')
 Config.set('graphics', 'height', '800')
-Builder.load_file('main_window.kv')
+Builder.load_file(os.path.join(app_dir, 'ui', 'main_window.kv'))
 
 
 class MainFrame(Widget):
@@ -25,7 +25,6 @@ class MainFrame(Widget):
             data = json.load(f)
         self.data = data
         self.currency_list = [data[key]['name'] for key in data]
-        print(self.currency_list)
         self.ids.c1_spinner.values = self.ids.c2_spinner.values = self.currency_list
         self.ids.c1_spinner.text = self.ids.c2_spinner.text = data['USD']['name']
         self.ids.c1_spinner.bind(text=self.change_spinner)
@@ -36,7 +35,6 @@ class MainFrame(Widget):
     def get_key_from_value(self, value: str):
         keys = [key for key in self.data if self.data[key]['name'] == value]
         if keys:
-            print(keys)
             return keys[0]
         return None
 
@@ -82,7 +80,3 @@ class Curren_pyApp(App):
     def build(self):
         self.icon = os.path.join(img_dir, 'curren_py_logo.png')
         return MainFrame()
-
-
-if __name__ == "__main__":
-    Curren_pyApp().run()
